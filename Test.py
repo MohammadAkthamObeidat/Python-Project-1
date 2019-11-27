@@ -95,7 +95,7 @@ for employee in employees_list:
     summation = summation + sum(employee.get_loans())
     print(
         f'Loans for employee {employee.number} is {employee.get_loans()} and the average is {sum(employee.get_loans()) / len(employee.get_loans())}')
-print(f'The grand average is {summation}')
+print(f'The grand average is {summation / len(employees_list)}')
 
 # =================================================================================================
 # Exercise 9
@@ -115,7 +115,8 @@ for o in loan_dic.values():
 for st in students_list:
     for mark in st.get_marks().values():
         if mark >= 90:
-            print(f'{st.get_name()}, the subject is {st.get_subject()} and the marks are {st.get_marks()}')
+            print(
+                f'{st.get_name()}, the subject is {st.get_subject()} and the marks are {st.get_marks()}')
 
 # =================================================================================================
 # Exercise 12
